@@ -1,4 +1,6 @@
-import model.User;
+package log4jstudy;
+
+import log4jstudy.model.User;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

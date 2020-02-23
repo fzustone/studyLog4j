@@ -1,4 +1,4 @@
-package flowtracing;
+package log4jstudy.flowtracing;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;

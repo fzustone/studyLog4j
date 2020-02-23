@@ -1,4 +1,4 @@
-package flowtracing;
+package log4jstudy.flowtracing;
 
 /**
  * @author chenly

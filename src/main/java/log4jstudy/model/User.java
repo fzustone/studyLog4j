@@ -1,4 +1,4 @@
-package model;
+package log4jstudy.model;
 
 import lombok.Data;
 

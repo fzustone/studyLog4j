@@ -1,4 +1,4 @@
-package flowtracing;
+package log4jstudy.flowtracing;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,35 +28,35 @@ public class TestService {
 	}
 
 	public String retrieveMessage() {
-		logger.entry();
+		logger.traceEntry();
 
 		String testMsg = getMessage(getKey());
 
-		return logger.exit(testMsg);
+		return logger.traceExit(testMsg);
 	}
 
 	public void exampleException() {
-		logger.entry();
+		logger.traceEntry();
 		try {
 			String msg = messages[messages.length];
 			logger.error("An exception should have been thrown");
 		} catch (Exception ex) {
 			logger.catching(ex);
 		}
-		logger.exit();
+		logger.traceExit();
 	}
 
 	public String getMessage(int key) {
-		logger.entry(key);
+		logger.traceEntry(String.valueOf(key));
 
 		String value = messages[key];
 
-		return logger.exit(value);
+		return logger.traceExit(value);
 	}
 
 	private int getKey() {
-		logger.entry();
+		logger.traceEntry();
 		int key = rand.nextInt(messages.length);
-		return logger.exit(key);
+		return logger.traceExit(key);
 	}
 }
